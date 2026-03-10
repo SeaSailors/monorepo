@@ -61,7 +61,7 @@ Welcome to the Commonware documentation. This index serves as a retrieval map fo
 
 ## Docs and MCP
 - [Docs Mirror](architecture/docs-mirror.md): Strategy for synchronizing code and documentation.
-- [Docs Workflow](guides/docs-workflow.md): Maintaining the llmdocs system.
+- [Docs Workflow](guides/docs-workflow.md): Maintaining the agent-docs system.
 - [Docs Specification](reference/docs-spec.md): Standards for documentation structure and metadata.
 - [MCP Server](architecture/mcp-server.md): Model Context Protocol server for LLM integration.
 - [MCP Workflow](guides/mcp-workflow.md): Using MCP to interact with Commonware primitives.
