@@ -1,13 +1,10 @@
 name: Benchmark
-
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 10 * * *' # Run at 10:00 UTC every day
-
+#on:
+#workflow_dispatch:
+#schedule:
+#- cron: '0 10 * * *' # Run at 10:00 UTC every day
 permissions:
   contents: read
-
 jobs:
   has-new-commit:
     name: Has New Commit? # Check if there are new commits in the last 24 hours
@@ -17,7 +14,6 @@ jobs:
         uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
         with:
           fetch-depth: 1
-
       - name: Exit early if no new commits
         id: check-commits
         run: |
@@ -26,7 +22,6 @@ jobs:
             echo "No new commits found in the last 24 hours"
             exit 1
           fi
-
   publish:
     name: Publish
     needs: has-new-commit # Only run if there are new commits
